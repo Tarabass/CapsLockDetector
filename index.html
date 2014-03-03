@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Capslockdetector : [ExtJs]A plugin for textfield to detect if caps lock is on" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Capslockdetector</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Tarabass/CapsLockDetector">View on GitHub</a>
+
+          <h1 id="project_title">Capslockdetector</h1>
+          <h2 id="project_tagline">[ExtJs]A plugin for textfield to detect if caps lock is on</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Tarabass/CapsLockDetector/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Tarabass/CapsLockDetector/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="caps-lock-detector" class="anchor" href="#caps-lock-detector"><span class="octicon octicon-link"></span></a>Caps Lock Detector</h1>
+
+<p><strong><em>Detects if caps lock is on while typing in textfields</em></strong></p>
+
+<h2>
+<a name="what-is-caps-lock-detector" class="anchor" href="#what-is-caps-lock-detector"><span class="octicon octicon-link"></span></a>What is Caps Lock Detector</h2>
+
+<p>Caps Lock Detector is a plugin for textfields which will detect if caps lock is on while the user is typing. If caps lock is on Caps Lock Detector shows a warning to help users prevent wrong input. This can be very useful for password fields for example. Caps Lock Detector is configurable so programmers can set the warning text, can add an icon class and much more.</p>
+
+<h3>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<ol>
+<li>Place the plugin somewhere in your workspace/app</li>
+<li>Change the namespace as you wish</li>
+<li>Add the namespace to the requires array of the view from where you want to use Caps Lock Detector</li>
+<li>Create a plugin array from within the config of a textfield and configure the plugin</li>
+</ol><h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<pre><code>requires: [
+    'Ext.form.field.plugin.CapsLockDetector'
+],
+
+...
+
+{
+    xtype: 'textfield',
+    name: 'password',
+    inputType: 'password',
+    plugins: [{
+        ptype: 'capslockdetector',
+        title: 'Caps lock is on',
+        html: 'Having caps lock on may cause you to enter your password incorrectly.'
+    }]
+}
+</code></pre>
+
+<h3>
+<a name="configs" class="anchor" href="#configs"><span class="octicon octicon-link"></span></a>Configs</h3>
+
+<p><strong>anchor</strong></p>
+
+<p>If specified, indicates that Caps Lock Detector should be anchored to a particular side of the target element ("top", "right", "bottom", or "left"), with an arrow pointing back at the target.</p>
+
+<p><strong>glyph</strong></p>
+
+<p>A numeric unicode character code to use as the icon for the header of Caps Lock Detector. For example '65@My Font Family'.</p>
+
+<p><strong>icon</strong></p>
+
+<p>Path to image for an icon in the header. Used for displaying an icon to the left of a title.</p>
+
+<p><strong>iconCls</strong></p>
+
+<p>CSS class for an icon in the header. Used for displaying an icon to the left of a title.</p>
+
+<p><strong>message</strong></p>
+
+<p>Message to show at the use while caps lock is on.</p>
+
+<p><strong>title</strong></p>
+
+<p>Title to show in the header of Caps Lock Detector.</p>
+
+<p><strong>width</strong></p>
+
+<p>Default to 300.</p>
+
+<h3>
+<a name="known-issues" class="anchor" href="#known-issues"><span class="octicon octicon-link"></span></a>Known issues</h3>
+
+<ol>
+<li>Needs to be tested in older versions of ExtJs</li>
+<li>Needs to be tested in several environments</li>
+</ol><h3>
+<a name="the-mit-license-mit" class="anchor" href="#the-mit-license-mit"><span class="octicon octicon-link"></span></a>The MIT License (MIT)</h3>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+
+<h3>
+<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h3>
+
+<p><a href="https://github.com/Tarabass" class="user-mention">@Tarabass</a></p>
+
+<p><a href="https://github.com/Tarabass">https://github.com/Tarabass</a></p>
+
+<p><strong><em>Copyright (c) 2014 Peter Rietveld</em></strong></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Capslockdetector maintained by <a href="https://github.com/Tarabass">Tarabass</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
