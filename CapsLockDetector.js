@@ -26,7 +26,7 @@ Ext.define('Ext.form.field.plugin.CapsLockDetector', {
 		// Be sure we are listening to key events
 		field.enableKeyEvents = true;
 		
-		me.fieldListeners = field.on(fieldListeners);
+		me.fieldListeners = field.mon(fieldListeners);
 		me.toolTip = undefined;
     },
 	
@@ -65,10 +65,5 @@ Ext.define('Ext.form.field.plugin.CapsLockDetector', {
 				me.toolTip.hide();
 			}
 		}
-	},
-	
-	destroy: function() {
-        // Remove listeners from field
-        Ext.destroy(me.fieldListeners);
-    }
+	}
 });
