@@ -24,7 +24,7 @@ Caps Lock Detector is a plugin for textfields which will detect if caps lock is 
 		plugins: [{
 			ptype: 'capslockdetector',
 			title: 'Caps lock is on',
-			html: 'Having caps lock on may cause you to enter your password incorrectly.'
+			message: 'Having caps lock on may cause you to enter your password incorrectly.'
 		}]
 	}
 
