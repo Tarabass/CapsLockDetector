@@ -1,6 +1,6 @@
 Ext.define('Ext.form.field.plugin.CapsLockDetector', {
-    extend: 'Ext.AbstractPlugin',
-    alias: 'plugin.capslockdetector',
+	extend: 'Ext.AbstractPlugin',
+	alias: 'plugin.capslockdetector',
 
 	anchor: 'top',
 	width: 300,
@@ -9,13 +9,13 @@ Ext.define('Ext.form.field.plugin.CapsLockDetector', {
 	glyph: '',
 	message: '',
 	title: '',
-		
-    /**
-     * This method adds capslockdetector to a form field
-     *
-     * @param field The ext form field cmp
-     */
-    init: function (field) {
+
+	/**
+	 * This method adds capslockdetector to a form field
+	 *
+	 * @param field The ext form field cmp
+	 */
+	init: function(field) {
 		var me = this,
 			fieldListeners = {
 				keypress: this.onTextfieldKeyPress,
@@ -25,22 +25,22 @@ Ext.define('Ext.form.field.plugin.CapsLockDetector', {
 
 		// Be sure we are listening to key events
 		field.enableKeyEvents = true;
-		
+
 		me.fieldListeners = field.on(fieldListeners);
 		me.toolTip = undefined;
-    },
-	
+	},
+
 	/**
-     * This method shows or hides the tooltip based on capslock status
-     *
-     * @param field
+	 * This method shows or hides the tooltip based on capslock status
+	 *
+	 * @param field
 	 * @param e
-     * @param eOpts
-     */
+	 * @param eOpts
+	 */
 	onTextfieldKeyPress: function(field, e, eOpts) {
 		var me = this,
 			charCode = e.getCharCode();
-		
+
 		if((e.shiftKey && charCode >= 97 && charCode <= 122) || (!e.shiftKey && charCode >= 65 && charCode <= 90)) {
 			if(me.toolTip === undefined) {
 				me.toolTip = Ext.widget({
@@ -58,17 +58,18 @@ Ext.define('Ext.form.field.plugin.CapsLockDetector', {
 					html: !Ext.isEmpty(me.message) ? me.message : 'Please implement tooltip html'
 				});
 			}
-			
+
 			me.toolTip.show();
-		} else {
+		}
+		else {
 			if(me.toolTip !== undefined) {
 				me.toolTip.hide();
 			}
 		}
 	},
-	
+
 	destroy: function() {
-        // Remove listeners from field
-        Ext.destroy(this.fieldListeners);
-    }
+		// Remove listeners from field
+		Ext.destroy(this.fieldListeners);
+	}
 });
