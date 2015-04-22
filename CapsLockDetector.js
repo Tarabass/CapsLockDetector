@@ -69,6 +69,6 @@ Ext.define('Ext.form.field.plugin.CapsLockDetector', {
 	
 	destroy: function() {
         // Remove listeners from field
-        Ext.destroy(me.fieldListeners);
+        Ext.destroy(this.fieldListeners);
     }
 });
